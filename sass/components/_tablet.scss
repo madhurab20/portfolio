@@ -1,0 +1,194 @@
+/*media query for tablet */
+ 
+@media only screen and (max-width:768px){
+#header .menu-icon{
+    display: block;
+}
+#header .menu-icon{
+    display: block;
+}
+#header .menu-icon__line{
+    animation:closedMid 0.8s backwards;
+    animation-direction: reverse;
+}
+#header .menu-icon__line::before{
+    animation: closedTop 0.8s backwards;
+    animation-direction: reverse;
+}
+#header .menu-icon__line::after{
+    animation: closedBottom 0.8s backwards;
+    animation-direction: reverse;
+}
+
+#header .nav-links{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10rem 0;
+    width: 100vw;
+    height: 100vh;
+    font-size: 2rem;
+    color: darksalmon;
+    background: grey;
+    transition: opacity .8s .5s;
+                clip-path: 1s .5s;
+    clip-path: circle(200px at top right);
+}
+#header .nav-link{
+    opacity: 0;
+    transform: translateX(100%);
+    width: 100%;
+    text-align: center;
+}
+#header .nav-link a{
+    display: block;
+    padding: 2rem 0;
+}
+
+#header .menu-btn:checked ~ .nav-links{
+    opacity: 1;
+    clip-path: circle(100% at center);
+}
+#header .nav-link{
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity .4s ease-in-out, transform .6s cubic-bezier(0.175,0.885,1.275);
+}
+#header .nav-link:nth-of-type(1){
+    transition-delay: .7s;
+}
+#header .nav-link:nth-of-type(2){
+    transition-delay: .8s;
+}
+#header .nav-link:nth-of-type(3){
+    transition-delay: .9s;
+}
+#header .nav-link:nth-of-type(4){
+    transition-delay: 1s;
+}
+#header .menu-btn:checked ~ .menu-icon .menu-icon__line{
+    background: white;
+    animation: openMid 0.8s forwards;
+}
+#header .menu-btn:checked ~ .menu-icon .menu-icon__line::before{
+    background: white;
+    animation: openTop 0.8s forwards;
+}
+#header .menu-btn:checked ~ .menu-icon .menu-icon__line::after{
+    background: white;
+    animation: openBottom 0.8s forwards;
+}
+
+
+
+    #hero.cta{
+        font-size: 2.5rem;
+        padding:20px 60px;
+    }
+    h1.section-title{
+        font-size: 6rem;
+    }
+    /*hero */
+    #hero.section-title{
+        font-size: 7rem;
+    }
+    /*End of hero */
+
+    /*service section */
+    #academics .academics-bottom .academics-item{
+        flex-basis: 45%;
+        margin: 2.5%;
+        text-align: center;
+        // letter-spacing: .5rem;
+    }
+
+    /*end of service section */
+
+    /*project */
+    #projects .projects-item{
+        flex-direction: row;
+    }
+    #projects .projects-item:nth-child(even){
+        flex-direction: row-reverse;
+    }
+    #projects .projects-item{
+        height: 400px;
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+    #projects .all-projects .project-info{
+        height: 100%;
+    }
+    #projects .all-projects .project-img{
+        height: 100%;
+    }
+
+    /* end of project */
+
+    /* about */
+    #about .about{
+        flex-direction: row;
+    }
+    #about .col-left{
+        width: 600px;
+        height: 400px;
+        padding-left: 60px;
+    }
+    #about .about .col-left .about-img::after{
+        left: -45px;
+        top: 34px;
+        height: 100%;
+        width: 100%;
+        border: 10px solid crimson;
+        
+    }
+    #about .col-right{
+        text-align: left;
+        padding: 30px;
+    }
+    #about .col-right h1{
+        text-align: left;
+    }
+    /* end  about */
+
+    /* contact */
+    #contact .contact{
+        flex-direction: column;
+        padding: 100px 0;
+        align-items: center;
+        justify-content: center;
+        min-width: 20vh;
+    }
+    #contact .contact-items{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 0;
+    }
+    #contact .contact-item{
+        width: 30%;
+        margin: 0;
+        flex-direction: row;
+    }
+    #contact .contact-items .icon{
+        object-fit: contain;
+        height: 100px;
+        width: 100px;
+    }
+    #contact .contact-item .img{
+        object-fit: contain;
+    }
+    #contact .contact-item .contact-info{
+        width: 100%;
+        text-align: left;
+        padding-left: 20px;
+    }
+    
+}
+/*End media query for tablet */

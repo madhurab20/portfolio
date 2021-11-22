@@ -1,0 +1,89 @@
+/* academecis */
+
+
+#academics .academics{
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+
+    
+}
+#academics .academics-top{
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+
+#academics .academics-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: white;
+    font-size: 15px;
+    margin: 50px;
+    margin-top: 50px;
+
+   
+}
+
+#academics .academics .icon{
+    height: 80px;
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+
+
+
+#academics .academics-item{
+    flex-basis: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px;
+    border-radius: 10px;
+    background-image:linear-gradient(60deg, #5e646b 0%, #87898b 100%), url(../img/education3.png);
+    background-size: cover;
+    margin: 10px 5%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+  
+  
+    
+}
+
+#academics .academics::after{
+    content: '';
+    position: absolute;
+    left:0;
+    top:0;
+    height: 100%;
+    width: 100%;
+    // background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    opacity: .8;
+    z-index: -1;
+}
+
+#academics .academics h2{
+    font-size: 2.5rem;
+    color: black;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+
+}
+
+#academics .academics p{
+    font-size: 2rem;
+    color: black;
+    text-align: left;
+}
+
+
+
+/*end academecis */
